@@ -2,18 +2,22 @@
 
 This project is being made from a simple love of sports. This application can assist users in creating their own unique lineups using players throughout the NBA league.
 
-## Application Modals
+## Needs
 
-We are creating two main modals:
+We will need to access player data from NBA Api and store into our local database. We also need to be able to build custom teams from the players in our collection. We need to populate this data in a many to many fashion so multiple teams can have the same players and vice versa.
 
-- MyTeams Modal
+## Application Models
+
+We are creating two main models:
+
+- MyTeams model
 
   - title: String,
   - player: {
-    Ref to Player Modal
+    Ref to Player model
     }
 
-- MyPlayers Modal
+- MyPlayers model
   - name: String,
   - team: String,
   - position: String,
@@ -24,14 +28,24 @@ We are creating two main modals:
 
 ## CRUD
 
-- MyTeams Modal will have full CRUD methods
-- MyPlayers Modal will have create, read, and delete methods
+- MyTeams model will have full CRUD methods.
+- MyPlayers model will have create, read, and delete methods.
 
 ## Data Relationship
 
 A team has many players
-A player has one team
+A player has many teams
 
 ## Screenshots
 
-Screenshots of the wire frame will be attached to planning directory
+Screenshots of the wire frame and model are attached this directory.
+
+## Deployment
+
+This application will be deployed to Heroku and MondoDB Atlas.
+
+## Built With
+
+- [Express](https://expressjs.com/) - The web framework used
+- [Mongo](https://www.mongodb.com/) - The Database used
+- [NPM](https://www.npmjs.com/) - Dependency Management
