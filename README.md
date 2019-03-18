@@ -7,6 +7,7 @@ This application can assist users in creating their own unique lineups using pla
 
 * Users can create, access, and manage their own teams
 * Users can add players to their teams
+* Users can add players to their collection
 
 # Technologies Used
 
@@ -18,10 +19,9 @@ This application can assist users in creating their own unique lineups using pla
 # Prerequisites
 
 * Please make sure that you have all the necessary dependencies installed on your local machine. 
-  * body-parse
+  * body-parser
   * cors
   * express
-  * mongodb
   * mongoose
 
 # Contributing
