@@ -19,10 +19,10 @@ React
 Please read CONTRIBUTING.md for details on our code of conduct, and the process for submitting pull requests to us.
 
 # Authors
-Brian Curran - 
-Neftali Valdez - 
-Joshua Vance - 
-Ryan White - 
+Brian Curran  
+Neftali Valdez 
+Joshua Vance 
+Ryan White 
 
 # License
 This project is licensed under the MIT License - see the LICENSE.md file for details
