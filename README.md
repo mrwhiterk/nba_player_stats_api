@@ -5,8 +5,8 @@ This application can assist users in creating their own unique lineups using pla
 
 # Current Features
 
-Users can create, access, and manage their own teams
-Users can add players to their teams
+* Users can create, access, and manage their own teams
+* Users can add players to their teams
 
 # Technologies Used
 
@@ -17,7 +17,7 @@ Users can add players to their teams
 
 # Prerequisites
 
-* Please make sure that you have all the necessary dependencies install on your local machine. 
+* Please make sure that you have all the necessary dependencies installed on your local machine. 
   * body-parse
   * cors
   * express
