@@ -24,8 +24,6 @@ This application can assist users in creating their own unique lineups using pla
   * mongodb
   * mongoose
 
-* When running the seeds files, make sure to run skillsSeed.js file first and then employeesSeed.js file to avoid and error with the _id.
-
 # Contributing
 Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
 
