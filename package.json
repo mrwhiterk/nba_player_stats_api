@@ -1,0 +1,26 @@
+{
+  "name": "nba_player_stats",
+  "version": "1.0.0",
+  "description": "nba fantasy manager",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "echo \"# NBA_player_stats\" >> README.md"
+  },
+  "keywords": [
+    "git",
+    "init"
+  ],
+  "author": "Ryan White, Josh Vance, Brian Curran, Neftali Valdez calderon",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
+    "mongoose": "^5.4.19"
+  }
+}
