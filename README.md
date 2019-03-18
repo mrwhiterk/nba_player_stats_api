@@ -5,8 +5,8 @@ This application can assist users in creating their own unique lineups using pla
 
 # Current Features
 
-Users can create, access, and manage their own teams
-Users can add players to their teams
+* Users can create, access, and manage their own teams
+* Users can add players to their teams
 
 # Technologies Used
 
@@ -17,14 +17,12 @@ Users can add players to their teams
 
 # Prerequisites
 
-* Please make sure that you have all the necessary dependencies install on your local machine. 
+* Please make sure that you have all the necessary dependencies installed on your local machine. 
   * body-parse
   * cors
   * express
   * mongodb
   * mongoose
-
-* When running the seeds files, make sure to run skillsSeed.js file first and then employeesSeed.js file to avoid and error with the _id.
 
 # Contributing
 Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
@@ -37,5 +35,3 @@ Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c6
 
 # License
 This project is licensed under the MIT License - see the LICENSE.md file for details
-
-# Acknowledgments
