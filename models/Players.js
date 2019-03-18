@@ -10,6 +10,4 @@ const Players = new Schema({
   championship: String
 });
 
-const Player = mongoose.model("Player", Players);
-
-module.exports = Player;
+module.exports = Players;
