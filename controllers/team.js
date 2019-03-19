@@ -1,4 +1,4 @@
-const { Player, Team } = require("../models/team");
+const { Player, Team } = require("../models/Teams");
 
 module.exports = {
     index: function (req, res) {
