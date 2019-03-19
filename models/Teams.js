@@ -1,9 +1,9 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-const TeamSchema = new Schema({
+const Team = new Schema({
     fullName: String,
 });
 
-module.exports = TeamSchema;
+module.exports = Team;
 

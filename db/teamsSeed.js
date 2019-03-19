@@ -3,7 +3,7 @@ const { Team } = require("../models/index");
 Team.remove({}).then(_ => {
     Team.insertMany([
         {
-            fullName: "WDI Allstars"
+            fullName: "WDI Allstars",
         },
         {
             fullName: "Scrum Lords"
