@@ -1,38 +1,46 @@
-const { Players } = require("../models/index");
+const { Player } = require("../models/index");
 
-Players.remove({}).then(_ => {
-  Players.insertMany([
+Player.remove({}).then(_ => {
+  Player.insertMany([
     {
-      name: "Neftali",
-      team: "Washington Wizards",
-      position: "Shooting Guard",
-      height: "5'9",
-      age: "31",
-      championship: "1"
+      firstName: "Alex",
+      lastName: "Abrines",
+      personId: "203518",
+      pos: "G-F",
+      heightFeet: "6",
+      heightInches: "6",
+      dateOfBirthUTC: "1993-08-01",
+      nbaDebutYear: "2016",
+      yearsPro: "0",
+      collegeName: "",
+      country: "Spain"
     },
     {
-      name: "Josh",
-      team: "Washington Wizards",
-      position: "Point Guard",
-      height: "5'9",
-      age: "31",
-      championship: "1"
+      firstName: "Quincy",
+      lastName: "Acy",
+      personId: "203112",
+      pos: "F",
+      heightFeet: "6",
+      heightInches: "7",
+      dateOfBirthUTC: "1990-10-06",
+      nbaDebutYear: "2012",
+      yearsPro: "4",
+      collegeName: "Baylor",
+      country: "USA"
     },
+
     {
-      name: "Ryan",
-      team: "Washington Wizards",
-      position: "Power Forward",
-      height: "5'9",
-      age: "31",
-      championship: "1"
-    },
-    {
-      name: "Bryan",
-      team: "Washington Wizards",
-      position: "Center",
-      height: "5'9",
-      age: "31",
-      championship: "1"
+      firstName: "Steven",
+      lastName: "Adams",
+      personId: "203500",
+      pos: "C",
+      heightFeet: "7",
+      heightInches: "0",
+      dateOfBirthUTC: "11993-07-20",
+      nbaDebutYear: "2013",
+      yearsPro: "3",
+      collegeName: "Pittsburgh",
+      country: "New Zealand"
     }
   ]).then(player => {
     console.log(player);

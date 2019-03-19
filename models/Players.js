@@ -1,13 +1,18 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-const Players = new Schema({
-  name: String,
-  team: String,
-  position: String,
-  height: String,
-  age: String,
-  championship: String
+const Player = new Schema({
+  firstName: String,
+  lastName: String,
+  personId: String,
+  pos: String,
+  heightFeet: String,
+  heightInches: String,
+  dateOfBirthUTC: String,
+  yearsPro: String,
+  nbaDebutYear: String,
+  collegeName: String,
+  country: String
 });
 
-module.exports = Players;
+module.exports = Player;
