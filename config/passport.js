@@ -5,7 +5,8 @@ const Strategy = passportJWT.Strategy
 
 const config = require('./config')
 
-const mongoose = require('../models/user')
+// const mongoose = require('../models/index')
+const { User } = require('../models/index')
 
 const params = {
     secretOrKey: config.jwtSecret,

@@ -3,8 +3,7 @@ const router = express.Router()
 const jwt = require('jwt-simple')
 const passport = require('../config/passport')
 const config = require('../config/config')
-// const mongoose = require('../models/user')
-const { User } = require('../models/user')
+const { User } = require('../models/index')
 
 router.post('/signup', (req, res) => {
     if (req.body.email && req.body.password) {
@@ -37,5 +36,6 @@ router.post('/signup', (req, res) => {
         res.sendStatus(401)
     }
 })
+
 
 module.exports = router
