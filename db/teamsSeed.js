@@ -6,7 +6,7 @@ Team.remove({}).then(_ => {
       fullName: "WDI Allstars",
       teamRoster: [
         {
-          firstName: "Neftali 1",
+          firstName: "Alex",
           lastName: "Abrines",
           personId: "203518",
           pos: "G-F",
@@ -19,7 +19,7 @@ Team.remove({}).then(_ => {
           country: "Spain"
         },
         {
-          firstName: "Neftali 2",
+          firstName: "Quincy",
           lastName: "Acy",
           personId: "203112",
           pos: "F",
@@ -33,7 +33,7 @@ Team.remove({}).then(_ => {
         },
 
         {
-          firstName: "Neftali 3",
+          firstName: "Steven",
           lastName: "Adams",
           personId: "203500",
           pos: "C",
@@ -51,44 +51,44 @@ Team.remove({}).then(_ => {
       fullName: "Scrum Lords",
       teamRoster: [
         {
-          firstName: "Ryan 1",
-          lastName: "Abrines",
-          personId: "203518",
-          pos: "G-F",
+          firstName: "Arron",
+          lastName: "Afflalo",
+          personId: "201167",
+          pos: "G",
           heightFeet: "6",
-          heightInches: "6",
-          dateOfBirthUTC: "1993-08-01",
-          nbaDebutYear: "2016",
-          yearsPro: "0",
-          collegeName: "",
-          country: "Spain"
+          heightInches: "5",
+          dateOfBirthUTC: "1985-10-15",
+          nbaDebutYear: "2007",
+          yearsPro: "9",
+          collegeName: "UCLA",
+          country: "USA"
         },
         {
-          firstName: "Ryan 2",
-          lastName: "Acy",
-          personId: "203112",
-          pos: "F",
-          heightFeet: "6",
-          heightInches: "7",
-          dateOfBirthUTC: "1990-10-06",
-          nbaDebutYear: "2012",
-          yearsPro: "4",
-          collegeName: "Baylor",
-          country: "USA"
+          firstName: "Alexis",
+          lastName: "Ajinca",
+          personId: "201582",
+          pos: "C",
+          heightFeet: "7",
+          heightInches: "2",
+          dateOfBirthUTC: "1988-05-06",
+          nbaDebutYear: "2008",
+          yearsPro: "6",
+          collegeName: "Saint Etienne, France",
+          country: "France"
         },
 
         {
-          firstName: "Ryan 3",
-          lastName: "Adams",
-          personId: "203500",
+          firstName: "Cole",
+          lastName: "Aldrich",
+          personId: "202332",
           pos: "C",
-          heightFeet: "7",
-          heightInches: "0",
-          dateOfBirthUTC: "11993-07-20",
-          nbaDebutYear: "2013",
-          yearsPro: "3",
-          collegeName: "Pittsburgh",
-          country: "New Zealand"
+          heightFeet: "6",
+          heightInches: "11",
+          dateOfBirthUTC: "1988-10-31",
+          nbaDebutYear: "2010",
+          yearsPro: "6",
+          collegeName: "Kansas",
+          country: "USA"
         }
       ]
     },
@@ -96,44 +96,44 @@ Team.remove({}).then(_ => {
       fullName: "React Reactors",
       teamRoster: [
         {
-          firstName: "Josh 1",
-          lastName: "Abrines",
-          personId: "203518",
-          pos: "G-F",
-          heightFeet: "6",
-          heightInches: "6",
-          dateOfBirthUTC: "1993-08-01",
-          nbaDebutYear: "2016",
-          yearsPro: "0",
-          collegeName: "",
-          country: "Spain"
-        },
-        {
-          firstName: "Josh 2",
-          lastName: "Acy",
-          personId: "203112",
+          firstName: "LaMarcus",
+          lastName: "Aldridge",
+          personId: "200746",
           pos: "F",
           heightFeet: "6",
-          heightInches: "7",
-          dateOfBirthUTC: "1990-10-06",
-          nbaDebutYear: "2012",
-          yearsPro: "4",
-          collegeName: "Baylor",
+          heightInches: "11",
+          dateOfBirthUTC: "1985-07-19",
+          nbaDebutYear: "2006",
+          yearsPro: "10",
+          collegeName: "Texas",
+          country: "USA"
+        },
+        {
+          firstName: "Lavoy",
+          lastName: "Allen",
+          personId: "202730",
+          pos: "F-C",
+          heightFeet: "6",
+          heightInches: "9",
+          dateOfBirthUTC: "1989-02-04",
+          nbaDebutYear: "2011",
+          yearsPro: "5",
+          collegeName: "Temple",
           country: "USA"
         },
 
         {
-          firstName: "Josh 3",
-          lastName: "Adams",
-          personId: "203500",
-          pos: "C",
-          heightFeet: "7",
-          heightInches: "0",
-          dateOfBirthUTC: "11993-07-20",
-          nbaDebutYear: "2013",
-          yearsPro: "3",
-          collegeName: "Pittsburgh",
-          country: "New Zealand"
+          firstName: "Tony",
+          lastName: "Allen",
+          personId: "2754",
+          pos: "G-F",
+          heightFeet: "6",
+          heightInches: "4",
+          dateOfBirthUTC: "1982-01-11",
+          nbaDebutYear: "2004",
+          yearsPro: "12",
+          collegeName: "Oklahoma State",
+          country: "USA"
         }
       ]
     }
