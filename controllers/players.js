@@ -7,9 +7,14 @@ module.exports = {
     });
   },
 
+  show: (req, res) => {
+    Player.find({ _id: req.params.id }).then(player => {
+      res.json(player);
+    });
+  },
+
   create: (req, res) => {
     Player.create(req.body).then(player => res.json(player));
-    console.log(req.body);
   },
 
   delete: (req, res) => {

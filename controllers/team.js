@@ -1,4 +1,4 @@
-const { Team } = require('../models/index');
+const { Team } = require("../models/index");
 
 module.exports = {
   index: function(req, res) {
@@ -13,10 +13,9 @@ module.exports = {
   },
   create: (req, res) => {
     Team.create(req.body).then(team => res.json(team));
-    console.log(req.body);
   },
   update: (req, res) => {
-    Team.findOne({ name: req.params.name }).then(team => {
+    Team.findOne({ _id: req.params.id }).then(team => {
       team.fullName = req.body.fullName;
       team.save((err, team) => {
         res.json(team);
@@ -28,4 +27,15 @@ module.exports = {
       res.json(team);
     });
   },
+  removeTeamPlayer: (req, res) => {
+    Team.findOne({ _id: req.params.teamId }).then(team => {
+      team.teamRoster = team.teamRoster.filter(
+        player => player._id != req.params.playerId
+      );
+      team.save((err, team) => {
+        if (err) console.handle(err);
+        res.json(team);
+      });
+    });
+  }
 };
