@@ -15,7 +15,6 @@ module.exports = {
 
   create: (req, res) => {
     Player.create(req.body).then(player => res.json(player));
-    console.log(req.body);
   },
 
   delete: (req, res) => {

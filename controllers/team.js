@@ -14,7 +14,6 @@ module.exports = {
   },
   create: (req, res) => {
     Team.create(req.body).then(team => res.json(team));
-    console.log(req.body);
   },
   update: (req, res) => {
     Team.findOne({ _id: req.params.id }).then(team => {
@@ -29,19 +28,15 @@ module.exports = {
       res.json(team);
     });
   },
-  getTeamPlayer: (req, res) => {
-    Team.find({ _id: req.params.id }).then(player => {
-      player.map(roster => {
-        res.json(roster.teamRoster[0].id);
-        console.log(roster.teamRoster[0].id);
+  removeTeamPlayer: (req, res) => {
+    Team.findOne({ _id: req.params.teamId }).then(team => {
+      team.teamRoster = team.teamRoster.filter(
+        player => player._id != req.params.playerId
+      );
+      team.save((err, team) => {
+        if (err) console.handle(err);
+        res.json(team);
       });
     });
-    // Team.find({ _id: req.params.id })
-    //   .where(teamRoster[0].firstName)
-    //   .equals("Alex")
-    //   .then(player => {
-    //     res.json(player);
-    //     console.log(player);
-    //   });
   }
 };
