@@ -15,6 +15,6 @@ app.use(cors());
 
 app.use(require("./routes/index.js"));
 
-app.listen(app.get("port"), () => {
-  console.log("✅ port: " + app.get("port"));
+app.listen(app.get('port'), () => {
+  console.log('✅ port: ' + app.get('port'));
 });
