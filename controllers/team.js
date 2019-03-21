@@ -29,12 +29,26 @@ module.exports = {
   },
   removePlayerFromTeam: (req, res) => {
     Team.findOne({ _id: req.params.teamId }).then(team => {
-      team.teamRoster = team.teamRoster.filter(
-        player => player._id != req.params.playerId
+      const removedPlayer = team.teamRoster.find(
+        player => player._id == req.params.id
       );
+
+      team.teamRoster = team.teamRoster.filter(
+        player => player._id != req.params.id
+      );
+
       team.save((err, team) => {
         if (err) console.log(err);
-        res.json(team);
+        if (removedPlayer.firstName) {
+          res.json({
+            ...team,
+            removedPlayer: `Successfully removed ${removedPlayer.firstName} ${
+              removedPlayer.lastName
+            } from ${team.fullName}`,
+          });
+        } else {
+          res.json(team);
+        }
       });
     });
   },
