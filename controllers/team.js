@@ -1,4 +1,4 @@
-const { Team, Player } = require("../models/index");
+const { Team, Player } = require('../models/index');
 
 module.exports = {
   index: function(req, res) {
@@ -40,18 +40,34 @@ module.exports = {
   },
   addPlayerToTeam: (req, res) => {
     Team.findOne({ _id: req.params.teamId }).then(team => {
-      Player.findOne({ personId: req.params.personId }).then(player => {
-        let results = team.teamRoster.filter(
-          teamMember => teamMember.personId === player.personId
-        );
+      Player.findOne({ _id: req.params.id }).then(player => {
+        let results = team.teamRoster.filter(teamMember => {
+          return teamMember.personId === player.personId;
+        });
 
-        if (!results) team.teamRoster = [...team.teamRoster, player];
+        if (results.length == 0) {
+          team.teamRoster = [...team.teamRoster, player];
+        }
 
         team.save((err, team) => {
           if (err) console.log(err);
-          res.json(team);
+          if (results.length > 0) {
+            res.json({
+              ...team,
+              error: `${player.firstName} ${player.lastName} is already on ${
+                team.fullName
+              }`,
+            });
+          } else {
+            res.json({
+              ...team,
+              success: `Successfully added ${player.firstName} ${
+                player.lastName
+              } to ${team.fullName}`,
+            });
+          }
         });
       });
     });
-  }
+  },
 };
