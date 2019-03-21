@@ -41,17 +41,24 @@ module.exports = {
   addPlayerToTeam: (req, res) => {
     Team.findOne({ _id: req.params.teamId }).then(team => {
       Player.findOne({ _id: req.params.id }).then(player => {
+        let teamIsFull = team.teamRoster.length >= 12;
+
         let results = team.teamRoster.filter(teamMember => {
           return teamMember.personId === player.personId;
         });
 
-        if (results.length == 0) {
+        if (results.length == 0 && !teamIsFull) {
           team.teamRoster = [...team.teamRoster, player];
         }
 
         team.save((err, team) => {
           if (err) console.log(err);
-          if (results.length > 0) {
+          if (teamIsFull) {
+            res.json({
+              ...team,
+              full: `${team.fullName} is full`,
+            });
+          } else if (results.length > 0) {
             res.json({
               ...team,
               error: `${player.firstName} ${player.lastName} is already on ${
