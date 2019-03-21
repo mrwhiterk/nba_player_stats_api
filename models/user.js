@@ -1,8 +1,11 @@
-const mongoose = require("../db/connection");
+const mongoose = require('../db/connection');
 
-const UserSchema = new mongoose.Schema({
+const UserSchema = new mongoose.Schema(
+  {
     email: String,
     password: String,
-}, { timestamps: true });
+  },
+  { timestamps: true }
+);
 
 module.exports = UserSchema;
