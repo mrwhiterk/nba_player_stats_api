@@ -91,4 +91,32 @@ module.exports = {
       });
     });
   },
+  startPlayer: (req, res) => {
+    Team.findOne({ _id: req.params.teamId }).then(team => {
+      Player.findOne({ personId: req.params.personId }).then(player => {
+        var person = team.teamRoster.find(p => p.personId == player.personId);
+
+        person.isStarter = '1';
+
+        team.save((err, team) => {
+          if (err) console.log(err);
+          res.json(person);
+        });
+      });
+    });
+  },
+  removeStarterPlayer: (req, res) => {
+    Team.findOne({ _id: req.params.teamId }).then(team => {
+      Player.findOne({ personId: req.params.personId }).then(player => {
+        var person = team.teamRoster.find(p => p.personId == player.personId);
+
+        person.isStarter = '0';
+
+        team.save((err, team) => {
+          if (err) console.log(err);
+          res.json(person);
+        });
+      });
+    });
+  },
 };

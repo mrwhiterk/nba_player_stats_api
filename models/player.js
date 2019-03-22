@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const Player = new Schema({
@@ -12,7 +12,8 @@ const Player = new Schema({
   yearsPro: String,
   nbaDebutYear: String,
   collegeName: String,
-  country: String
+  country: String,
+  isStarter: String,
 });
 
 module.exports = Player;
